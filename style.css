@@ -21,6 +21,12 @@ main {
     margin: 0 auto;
 }
 
+.demo-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2em;
+}
+
 .flexbox-demo {
     display: flex;
     flex-direction: row;
@@ -45,9 +51,32 @@ main {
     }
 }
 
+.grid-demo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1em;
+    margin-top: 2em;
+
+    > * {
+        aspect-ratio: 1 / 1;
+        width: 100px;
+    }
+
+    div {
+        background-color: #007BFF;
+        color: white;
+        text-align: center;
+    }
+}
+
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 1em;
+}
+
+.highlight {
+    background-color: yellow;
 }

@@ -11,46 +11,86 @@
         <h1></h1>
     </header>
     <main>
-        
-        <div class="flexbox-demo">
-            <button onclick="switchDirection()">Cambiar Dirección</button>
-            <div></div>
-            <div></div>
-            <div></div>
+        <div class="demo-container">
+            <div class="flexbox-demo">
+                <button onclick="switchDirection()">Cambiar Dirección</button>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <pre>
+                <code>
+                    &lt;div class="flexbox-demo"&gt;
+                        &lt;button onclick="switchDirection()"&gt;Cambiar Dirección&lt;/button&gt;
+                        &lt;div&gt;&lt;/div&gt;
+                        &lt;div&gt;&lt;/div&gt;
+                        &lt;div&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                    .flexbox-demo {
+                        display: flex;
+                        <span id="directionText" class="highlight">flex-direction: row;</span>
+                        gap: 1em;
+                        margin-top: 2em;
+
+                        > * {
+                            aspect-ratio: 1 / 1;
+                            width: 100px;
+                        }
+
+                        button {
+                            background-color: #007BFF;
+                            color: white;
+                            cursor: pointer;
+                        }
+
+                        div {
+                            background-color: #007BFF;
+                            color: white;
+                            text-align: center;
+                        }
+                    }
+                </code>
+            </pre>
         </div>
-        <pre>
-            <code>
-                &lt;div class="flexbox-demo"&gt;
-                    &lt;button onclick="switchDirection()"&gt;Cambiar Dirección&lt;/button&gt;
-                    &lt;div&gt;&lt;/div&gt;
-                    &lt;div&gt;&lt;/div&gt;
-                    &lt;div&gt;&lt;/div&gt;
-                &lt;/div&gt;
-                .flexbox-demo {
-                    display: flex;
-                    flex-direction: row;
-                    gap: 1em;
-                    margin-top: 2em;
+        <div class="demo-container">
+            <div class="grid-demo">
+                <button onclick="addColumn()">Agregar Columnas</button>
+                <div></div>
+                <div></div>
+                <button onclick="removeColumn()">Quitar Columnas</button>
+            </div>
+            <pre>
+                <code>
+                    &lt;div class="demo-container"&gt;
+                        &lt;div class="grid-demo"&gt;
+                            &lt;button onclick="addColumn()"&gt;Agregar Columnas&lt;/button&gt;
+                            &lt;div&gt;&lt;/div&gt;
+                            &lt;div&gt;&lt;/div&gt;
+                            &lt;button onclick="removeColumn()"&gt;Quitar Columnas&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    .grid-demo {
+                        display: grid;
+                        <span id="columnText" class="highlight">grid-template-columns: repeat(2, 1fr);</span>
+                        grid-template-rows: repeat(2, 1fr);
+                        gap: 1em;
+                        margin-top: 2em;
 
-                    > * {
-                        aspect-ratio: 1 / 1;
-                        width: 100px;
-                    }
+                        > * {
+                            aspect-ratio: 1 / 1;
+                            width: 100px;
+                        }
 
-                    button {
-                        background-color: #007BFF;
-                        color: white;
-                        cursor: pointer;
+                        div {
+                            background-color: #007BFF;
+                            color: white;
+                            text-align: center;
+                        }
                     }
+                </code>
+            </pre>
+        </div>
 
-                    div {
-                        background-color: #007BFF;
-                        color: white;
-                        text-align: center;
-                    }
-                }
-            </code>
-        </pre>
     </main>
     <footer>
         <p>Pie de página</p>
