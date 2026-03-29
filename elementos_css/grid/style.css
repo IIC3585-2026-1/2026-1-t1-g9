@@ -1,5 +1,7 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Helvetica", sans-serif;
+    font-variant-caps: small-caps;
+    letter-spacing: 0.08em;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -9,15 +11,15 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #0d0d0d;
     color: white;
     text-align: center;
-    padding: 1em;
+    padding: 1px;
+    font-size: 25px;
 }
 
 main {
     padding: 2em;
-    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -33,6 +35,8 @@ main {
     grid-template-rows: repeat(2, 1fr);
     gap: 1em;
     margin-top: 2em;
+    width: 400px;
+    margin-right: 4em;
 
     > * {
         aspect-ratio: 1 / 1;
@@ -44,13 +48,6 @@ main {
         color: white;
         text-align: center;
     }
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em;
 }
 
 .highlight {
