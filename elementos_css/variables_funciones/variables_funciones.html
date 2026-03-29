@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="card.css">
+</head>
+<body>
+    <header>
+        <h1>Variables y Funciones</h1>
+    </header>
+
+    <main>
+        <div class="demo-container">
+            <section class="functions-demo">
+                <div class="controls-panel">
+                    <label>
+                        Variable Min
+                        <input id="min-limit" type="number" min="5" max="95" value="50">
+                    </label>
+                    <label>
+                        Variable Max
+                        <input id="max-limit" type="number" min="5" max="95" value="50">
+                    </label>
+                    <label>
+                        Variable Clamp
+                        <input id="clamp-ideal" type="number" min="20" max="95" value="50">
+                    </label>
+                </div>
+
+                <div class="functions-grid">
+                    <article class="example-card">
+                        <p><span class="formula-label">Fórmula:</span> <span id="calc-formula">calc((50% + 50%) / 2) = 50%</span></p>
+                        <div class="track">
+                            <div class="demo-box calc-box">calc()</div>
+                        </div>
+                    </article>
+
+                    <article class="example-card">
+                        <p><span class="formula-label">Fórmula:</span> <span id="min-formula">min(50%, 75%) = 50%</span></p>
+                        <div class="track">
+                            <div class="demo-box min-box">min()</div>
+                        </div>
+                    </article>
+
+                    <article class="example-card">
+                        <p><span class="formula-label">Fórmula:</span> <span id="max-formula">max(50%, 25%) = 50%</span></p>
+                        <div class="track">
+                            <div class="demo-box max-box">max()</div>
+                        </div>
+                    </article>
+
+                    <article class="example-card">
+                        <p><span class="formula-label">Fórmula:</span> <span id="clamp-formula">clamp(25%, 50%, 75%) = 50%</span></p>
+                        <div class="track">
+                            <div class="demo-box clamp-box">clamp()</div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <div class="card">
+                <div class="header">
+                    <div class="top">
+                        <div class="circle"><span class="red circle2"></span></div>
+                        <div class="circle"><span class="yellow circle2"></span></div>
+                        <div class="circle"><span class="green circle2"></span></div>
+                        <div class="title">
+                            <p class="title-text">CSS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-container">
+                    <textarea class="area" id="css-code" name="css-code" readonly>
+:root {
+    --box-color: #007BFF;
+    --min-limit: 50%;
+    --max-limit: 50%;
+    --clamp-ideal: 50%;
+}
+
+.calc-box {
+    width: calc((var(--min-limit) + var(--max-limit)) / 2);
+}
+
+.min-box {
+    width: min(var(--min-limit), 75%);
+}
+
+.max-box {
+    width: max(var(--max-limit), 25%);
+}
+
+.clamp-box {
+    width: clamp(25%, var(--clamp-ideal), 75%);
+}
+                    </textarea>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="header">
+                    <div class="top">
+                        <div class="circle"><span class="red circle2"></span></div>
+                        <div class="circle"><span class="yellow circle2"></span></div>
+                        <div class="circle"><span class="green circle2"></span></div>
+                        <div class="title">
+                            <p class="title-text">HTML</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-container">
+                    <textarea class="area" id="html-code" name="html-code" readonly>
+&lt;article class="example-card"&gt;
+    &lt;p&gt;Fórmula: calc((50% + 50%) / 2) = 50%&lt;/p&gt;
+    &lt;div class="track"&gt;
+        &lt;div class="demo-box calc-box"&gt;calc()&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/article&gt;
+
+&lt;article class="example-card"&gt;
+    &lt;p&gt;Fórmula: min(50%, 75%) = 50%&lt;/p&gt;
+    &lt;div class="track"&gt;
+        &lt;div class="demo-box min-box"&gt;min()&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/article&gt;
+
+&lt;article class="example-card"&gt;
+    &lt;p&gt;Fórmula: max(50%, 25%) = 50%&lt;/p&gt;
+    &lt;div class="track"&gt;
+        &lt;div class="demo-box max-box"&gt;max()&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/article&gt;
+
+&lt;article class="example-card"&gt;
+    &lt;p&gt;Fórmula: clamp(25%, 50%, 75%) = 50%&lt;/p&gt;
+    &lt;div class="track"&gt;
+        &lt;div class="demo-box clamp-box"&gt;clamp()&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/article&gt;
+                    </textarea>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
