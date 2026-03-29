@@ -3,55 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Básica</title>
+    <title>Elementos CSS</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1></h1>
+        <h1>Grid</h1>
     </header>
     <main>
-        <div class="demo-container">
-            <div class="flexbox-demo">
-                <button onclick="switchDirection()">Cambiar Dirección</button>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <pre>
-                <code>
-                    &lt;div class="flexbox-demo"&gt;
-                        &lt;button onclick="switchDirection()"&gt;Cambiar Dirección&lt;/button&gt;
-                        &lt;div&gt;&lt;/div&gt;
-                        &lt;div&gt;&lt;/div&gt;
-                        &lt;div&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                    .flexbox-demo {
-                        display: flex;
-                        <span id="directionText" class="highlight">flex-direction: row;</span>
-                        gap: 1em;
-                        margin-top: 2em;
-
-                        > * {
-                            aspect-ratio: 1 / 1;
-                            width: 100px;
-                        }
-
-                        button {
-                            background-color: #007BFF;
-                            color: white;
-                            cursor: pointer;
-                        }
-
-                        div {
-                            background-color: #007BFF;
-                            color: white;
-                            text-align: center;
-                        }
-                    }
-                </code>
-            </pre>
-        </div>
         <div class="demo-container">
             <div class="grid-demo">
                 <button onclick="addColumn()">Agregar Columnas</button>
@@ -92,9 +51,6 @@
         </div>
 
     </main>
-    <footer>
-        <p>Pie de página</p>
-    </footer>
     <script src="script.js"></script>
 </body>
 </html>
