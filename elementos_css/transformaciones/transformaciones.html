@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="card.css">
+</head>
+<body>
+    <header>
+        <h1>Transformaciones</h1>
+    </header>
+
+    <main>
+        <div class="demo-container">
+            <section class="transform-demo" aria-labelledby="demo-title">
+                <div class="transform-grid">
+                    <button class="transform-card" data-transform="translate" type="button" aria-pressed="false">
+                        <span class="shape shape-translate">Traslación</span>
+                    </button>
+
+                    <button class="transform-card" data-transform="rotate" type="button" aria-pressed="false">
+                        <span class="shape shape-rotate">Rotación</span>
+                    </button>
+
+                    <button class="transform-card" data-transform="scale" type="button" aria-pressed="false">
+                        <span class="shape shape-scale">Escalar</span>
+                    </button>
+
+                    <button class="transform-card" data-transform="skew" type="button" aria-pressed="false">
+                        <span class="shape shape-skew">Sesgar</span>
+                    </button>
+                </div>
+            </section>
+
+            <div class="card">
+                <div class="header">
+                    <div class="top">
+                        <div class="circle"><span class="red circle2"></span></div>
+                        <div class="circle"><span class="yellow circle2"></span></div>
+                        <div class="circle"><span class="green circle2"></span></div>
+                        <div class="title">
+                            <p class="title-text">CSS</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-container">
+                    <textarea class="area" id="css-code" name="css-code" readonly>
+.shape-translate.is-active {
+    transform: translate(36px, -18px);
+}
+
+.shape-rotate.is-active {
+    transform: rotate(45deg);
+}
+
+.shape-scale.is-active {
+    transform: scale(1.3);
+}
+
+.shape-skew.is-active {
+    transform: skew(-18deg, 0deg);
+}
+                    </textarea>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="header">
+                    <div class="top">
+                        <div class="circle"><span class="red circle2"></span></div>
+                        <div class="circle"><span class="yellow circle2"></span></div>
+                        <div class="circle"><span class="green circle2"></span></div>
+                        <div class="title">
+                            <p class="title-text">HTML</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-container">
+                    <textarea class="area" id="html-code" name="html-code" readonly>
+&lt;button class="transform-card" data-transform="translate" type="button"&gt;
+    &lt;span class="shape shape-translate"&gt;Traslación&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;button class="transform-card" data-transform="rotate" type="button"&gt;
+    &lt;span class="shape shape-rotate"&gt;Rotación&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;button class="transform-card" data-transform="scale" type="button"&gt;
+    &lt;span class="shape shape-scale"&gt;Escalar&lt;/span&gt;
+&lt;/button&gt;
+
+&lt;button class="transform-card" data-transform="skew" type="button"&gt;
+    &lt;span class="shape shape-skew"&gt;Sesgar&lt;/span&gt;
+&lt;/button&gt;
+                    </textarea>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
