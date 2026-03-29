@@ -4,8 +4,11 @@ let columns = 2;
 
 function updateGrid() {
     gridContainer.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
-    const text = document.getElementById('columnText');
-    text.textContent = `grid-template-columns: repeat(${columns}, 1fr);`;
+    const text = document.getElementById('code');
+    text.value = text.value.replace(
+        /grid-template-columns:\s*repeat\(\d+,\s*1fr\);/,
+        `grid-template-columns: repeat(${columns}, 1fr);`
+    );
 }
 
 function addColumn() {
