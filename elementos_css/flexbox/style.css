@@ -1,5 +1,7 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Helvetica", sans-serif;
+    font-variant-caps: small-caps;
+    letter-spacing: 0.08em;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -9,10 +11,11 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #0d0d0d;
     color: white;
     text-align: center;
-    padding: 1em;
+    padding: 1px;
+    font-size: 25px;
 }
 
 main {
@@ -24,6 +27,11 @@ main {
     display: flex;
     align-items: flex-start;
     gap: 2em;
+}
+
+.flexbox-wrapper {
+    width: 500px;
+    height: 260px;
 }
 
 .flexbox-demo {
@@ -48,13 +56,6 @@ main {
         color: white;
         text-align: center;
     }
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1em;
 }
 
 .highlight {
