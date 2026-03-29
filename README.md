@@ -1,6 +1,6 @@
 # 2026-1-t1-g9
 
-### 1. Descarga/Clona la carpeta de la tarea  
+### 1. Descargar/Clonar la carpeta de la tarea  
 
 ### 2. Entrar a la carpeta
 ```bash
