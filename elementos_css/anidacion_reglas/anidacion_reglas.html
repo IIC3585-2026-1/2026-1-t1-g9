@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="card.css">
+</head>
+<body>
+
+<header>
+    <h1>Anidación de Reglas</h1>
+</header>
+
+<main>
+    <h2>CSS que usa anidación de reglas:</h2>
+    <div class="demo-container">
+        <div class="anidacion-wrapper">
+            <div class="anidacion-demo">
+                <h3>Ejemplo de Anidación de Reglas</h3>
+                <button>Pasa el mouse por acá para ver el efecto</button>
+            </div>
+        </div>
+    </div>
+    <p class="explicacion">
+        La anidación de reglas se usa para aplicar estilos a un elemento dentro del contexto de otro elemento. 
+        Además, reduce la necesidad de repetir selectores para elementos relacionados.
+    </p>
+    <h2>Sin anidar, hay que declarar cada selector explícitamente y por separado:</h2>
+    <div class="demo-container">
+        <div class="card">
+            <div class="header">
+                <div class="top">
+                    <div class="circle"><span class="red circle2"></span></div>
+                    <div class="circle"><span class="yellow circle2"></span></div>
+                    <div class="circle"><span class="green circle2"></span></div>
+                    <div class="title">
+                        <p id="title2">CSS</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="code-container">
+                <textarea class="area" id="code" name="code" readonly>
+.anidacion-demo {
+    padding: 20px;
+    background: #007BFF;
+    color: white;
+    border-radius: 10px;
+}
+
+.anidacion-demo h3 {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.anidacion-demo button {
+    padding: 10px 15px;
+    border: none;
+    background: white;
+    color: #007BFF;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.anidacion-demo button:hover {
+    background: #e0e0e0;
+}
+                </textarea>
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="header">
+                <div class="top">
+                    <div class="circle"><span class="red circle2"></span></div>
+                    <div class="circle"><span class="yellow circle2"></span></div>
+                    <div class="circle"><span class="green circle2"></span></div>
+                    <div class="title">
+                        <p id="title2">HTML</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="code-container">
+                <textarea class="area" id="code" name="code" readonly>
+&lt;div class="anidacion-demo"&gt;
+    &lt;h3&gt;Ejemplo de Anidación de Reglas&lt;/h3&gt;
+    &lt;button&gt;Pasa el mouse por acá para ver el efecto&lt;/button&gt;
+&lt;/div&gt;
+                </textarea>
+            </div>
+
+        </div>
+
+    </div>
+
+    <h2>Anidando, los selectores continúan dentro del selector principal y las reglas relacionadas quedan agrupadas dentro de la regla padre:</h2>
+    <div class="demo-container">
+        <div class="card">
+            <div class="header">
+                <div class="top">
+                    <div class="circle"><span class="red circle2"></span></div>
+                    <div class="circle"><span class="yellow circle2"></span></div>
+                    <div class="circle"><span class="green circle2"></span></div>
+                    <div class="title">
+                        <p id="title2">CSS</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="code-container">
+                <textarea class="area" id="code" name="code" readonly>
+.anidacion-demo {
+    padding: 20px;
+    background: #007BFF;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h3 {
+        margin: 0 0 10px 0;
+    }
+
+    button {
+        padding: 10px 15px;
+        border: none;
+        background: white;
+        color: #007BFF;
+        border-radius: 6px;
+        cursor: pointer;
+
+        &:hover {
+            background: #e0e0e0;
+        }
+    }
+}
+                </textarea>
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="header">
+                <div class="top">
+                    <div class="circle"><span class="red circle2"></span></div>
+                    <div class="circle"><span class="yellow circle2"></span></div>
+                    <div class="circle"><span class="green circle2"></span></div>
+                    <div class="title">
+                        <p id="title2">HTML</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="code-container">
+                <textarea class="area" id="code" name="code" readonly>
+&lt;div class="anidacion-demo"&gt;
+    &lt;h3&gt;Ejemplo de Anidación de Reglas&lt;/h3&gt;
+    &lt;button&gt;Pasa el mouse por acá para ver el efecto&lt;/button&gt;
+&lt;/div&gt;
+                </textarea>
+            </div>
+
+        </div>
+
+    </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
