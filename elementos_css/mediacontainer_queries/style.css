@@ -89,13 +89,13 @@ main {
     overflow: hidden;
 }
 
-.media_column {
+.media_columns {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
 }
 
-.column {
+.media_column {
     flex: 20%;
     padding: 20px;
     background-color: #007BFF;
@@ -107,17 +107,17 @@ main {
 }
 
 @media screen and (max-width: 992px) {
-    .column {
+    .media_column {
         flex: 33.33%;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .media_column {
+    .media_columns {
         flex-direction: column;
     }
 
-    .column {
+    .media_column {
         flex: 100%;
     }
 }
@@ -127,3 +127,60 @@ main {
     margin-top: 80px;
 }
 
+.left-side {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.size-controller {
+    margin-bottom: 1em;
+    font-family: Helvetica, sans-serif;
+}
+
+#sizeInput {
+    width: 200px;
+}
+
+.container_column-wrapper {
+    width: 500px;
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    overflow: hidden;
+
+    container-type: inline-size;
+    container-name: mediaCol;
+}
+
+.container_columns {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.container_column {
+    flex: 20%;
+    padding: 20px;
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    border: 1px solid white;
+    margin: 0;
+}
+
+@container mediaCol (max-width: 300px) {
+    .container_columns {
+        flex-direction: column;
+    }
+
+    .container_column {
+        flex: 100%;
+    }
+}
+
+@container mediaCol (max-width: 400px) {
+    .container_column {
+        flex: 33.33%;
+    }
+}

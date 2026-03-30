@@ -98,13 +98,13 @@
     
     <div class="demo-container">
         <div class="media_column-wrapper">
-            <div class="media_column">
-                <div class="column">Columna 1</div>
-                <div class="column">Columna 2</div>
-                <div class="column">Columna 3</div>
-                <div class="column">Columna 4</div>
-                <div class="column">Columna 5</div>
-                <div class="column">Columna 6</div>
+            <div class="media_columns">
+                <div class="media_column">Columna 1</div>
+                <div class="media_column">Columna 2</div>
+                <div class="media_column">Columna 3</div>
+                <div class="media_column">Columna 4</div>
+                <div class="media_column">Columna 5</div>
+                <div class="media_column">Columna 6</div>
             </div>
         </div>
 
@@ -129,13 +129,13 @@
     overflow: hidden;
 }
 
-.media_column {
+.media_columns {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
 }
 
-.column {
+.media_column {
     flex: 20%;
     padding: 20px;
     background-color: #007BFF;
@@ -147,17 +147,17 @@
 }
 
 @media screen and (max-width: 992px) {
-    .column {
+    .media_column {
         flex: 33.33%;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .media_column {
+    .media_columns {
         flex-direction: column;
     }
 
-    .column {
+    .media_column {
         flex: 100%;
     }
 }
@@ -181,13 +181,13 @@
             <div class="code-container">
                 <textarea class="area" id="code" name="code" readonly>
 &lt;div class="media_column-wrapper"&gt;
-    &lt;div class="media_column"&gt;
-        &lt;div class="column"&gt;Columna 1&lt;/div&gt;
-        &lt;div class="column"&gt;Columna 2&lt;/div&gt;
-        &lt;div class="column"&gt;Columna 3&lt;/div&gt;
-        &lt;div class="column"&gt;Columna 4&lt;/div&gt;
-        &lt;div class="column"&gt;Columna 5&lt;/div&gt;
-        &lt;div class="column"&gt;Columna 6&lt;/div&gt;
+    &lt;div class="media_columns"&gt;
+        &lt;div class="media_column"&gt;Columna 1&lt;/div&gt;
+        &lt;div class="media_column"&gt;Columna 2&lt;/div&gt;
+        &lt;div class="media_column"&gt;Columna 3&lt;/div&gt;
+        &lt;div class="media_column"&gt;Columna 4&lt;/div&gt;
+        &lt;div class="media_column"&gt;Columna 5&lt;/div&gt;
+        &lt;div class="media_column"&gt;Columna 6&lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
                 </textarea>
@@ -199,6 +199,118 @@
 
 
     <h2 class="container-title">Container Queries: Actuan en función del tamaño del contenedor</h2>
+    <div class="demo-container">
+        <div class="left-side">
+            <div class="size-controller">
+                <label for="sizeInput">Ancho del container:</label>
+                <input type="range" id="sizeInput" min="200" max="500" value="500" />
+                <span id="sizeValue">500px</span>
+            </div>
+
+            <div class="container_column-wrapper" id="resizeBox">
+                <div class="container_columns">
+                    <div class="container_column">Columna 1</div>
+                    <div class="container_column">Columna 2</div>
+                    <div class="container_column">Columna 3</div>
+                    <div class="container_column">Columna 4</div>
+                    <div class="container_column">Columna 5</div>
+                    <div class="container_column">Columna 6</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="header">
+                <div class="top">
+                    <div class="circle"><span class="red circle2"></span></div>
+                    <div class="circle"><span class="yellow circle2"></span></div>
+                    <div class="circle"><span class="green circle2"></span></div>
+                    <div class="title">
+                        <p id="title2">CSS</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="code-container">
+                <textarea class="area" id="code" name="code" readonly>
+.container_column-wrapper {
+    width: 500px;
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    overflow: hidden;
+
+    container-type: inline-size;
+    container-name: mediaCol;
+}
+
+.container_columns {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.container_column {
+    flex: 20%;
+    padding: 20px;
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    border: 1px solid white;
+    margin: 0;
+}
+
+@container mediaCol (max-width: 300px) {
+    .container_columns {
+        flex-direction: column;
+    }
+
+    .container_column {
+        flex: 100%;
+    }
+}
+
+@container mediaCol (max-width: 400px) {
+    .container_column {
+        flex: 33.33%;
+    }
+}
+                </textarea>
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="header">
+                <div class="top">
+                    <div class="circle"><span class="red circle2"></span></div>
+                    <div class="circle"><span class="yellow circle2"></span></div>
+                    <div class="circle"><span class="green circle2"></span></div>
+                    <div class="title">
+                        <p id="title2">HTML</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="code-container">
+                <textarea class="area" id="code" name="code" readonly>
+&lt;div class="container_column-wrapper"&gt;
+    &lt;div class="container_columns"&gt;
+        &lt;div class="container_column"&gt;Columna 1&lt;/div&gt;
+        &lt;div class="container_column"&gt;Columna 2&lt;/div&gt;
+        &lt;div class="container_column"&gt;Columna 3&lt;/div&gt;
+        &lt;div class="container_column"&gt;Columna 4&lt;/div&gt;
+        &lt;div class="container_column"&gt;Columna 5&lt;/div&gt;
+        &lt;div class="container_column"&gt;Columna 6&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                </textarea>
+            </div>
+
+        </div>
+    </div>
+    
+
+
 </main>
 
 <script src="script.js"></script>
