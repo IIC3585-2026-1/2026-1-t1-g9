@@ -1,0 +1,129 @@
+body {
+    font-family: "Helvetica", sans-serif;
+    font-variant-caps: small-caps;
+    letter-spacing: 0.08em;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+}
+
+header {
+    background-color: #0d0d0d;
+    color: white;
+    text-align: center;
+    padding: 1px;
+    font-size: 25px;
+}
+
+main {
+    padding: 2em;
+    margin: 0 auto;
+}
+
+.demo-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2em;
+}
+
+.media-wrapper {
+    width: 500px;
+    height: 440px;
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+.demo-container + .demo-container {
+    margin-top: 4em;
+}
+
+/* Basado en ejemplo obtenido de https://www.w3schools.com/css/css3_mediaqueries_ex.asp */
+.media_color {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+    transition: background-color 0.5s, color 0.5s;
+    background-color: olive;
+    color: white;
+    padding: 20px; 
+    box-sizing: border-box; 
+}
+
+@media screen and (min-width: 768px) {
+    .media_color {
+        background-color: blue;
+        color: white;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .media_color {
+        background-color: tan;
+        color: black;
+    }
+}
+
+/* Basado en ejemplo obtenido de https://www.w3schools.com/css/css3_mediaqueries_ex.asp */
+.media_column-wrapper {
+    width: 500px;
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.media_column {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    flex: 20%;
+    padding: 20px;
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    border: 1px solid white;
+    margin: 0;
+    transition: all 0.3s;
+}
+
+@media screen and (max-width: 992px) {
+    .column {
+        flex: 33.33%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .media_column {
+        flex-direction: column;
+    }
+
+    .column {
+        flex: 100%;
+    }
+}
+
+
+.container-title {
+    margin-top: 80px;
+}
+

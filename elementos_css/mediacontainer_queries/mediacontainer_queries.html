@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="card.css">
+</head>
+<body>
+
+<header>
+    <h1>Media & Container Queries</h1>
+</header>
+
+<main>
+    <h2>Media Queries: Actuan en función del tamaño de la ventana</h2>
+    <div class="demo-container">
+        <div class="media-wrapper">
+            <div class="media_color">
+                <p>Cambia de tamaño la ventana para ver</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="header">
+                <div class="top">
+                    <div class="circle"><span class="red circle2"></span></div>
+                    <div class="circle"><span class="yellow circle2"></span></div>
+                    <div class="circle"><span class="green circle2"></span></div>
+                    <div class="title">
+                        <p id="title2">CSS</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="code-container">
+                <textarea class="area" id="code" name="code" readonly>
+.media_color {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+    transition: background-color 0.5s, color 0.5s;
+    background-color: olive;
+    color: white;
+    padding: 20px; 
+    box-sizing: border-box; 
+}
+
+@media screen and (min-width: 768px) {
+    .media_color {
+        background-color: blue;
+        color: white;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .media_color {
+        background-color: tan;
+        color: black;
+    }
+}
+                </textarea>
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="header">
+                <div class="top">
+                    <div class="circle"><span class="red circle2"></span></div>
+                    <div class="circle"><span class="yellow circle2"></span></div>
+                    <div class="circle"><span class="green circle2"></span></div>
+                    <div class="title">
+                        <p id="title2">HTML</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="code-container">
+                <textarea class="area" id="code" name="code" readonly>
+&lt;div class="media-wrapper"&gt;
+    &lt;div class="media_color"&gt;
+        &lt;p&gt;Cambia de tamaño la ventana para ver&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                </textarea>
+            </div>
+
+        </div>
+
+    </div>
+    
+    <div class="demo-container">
+        <div class="media_column-wrapper">
+            <div class="media_column">
+                <div class="column">Columna 1</div>
+                <div class="column">Columna 2</div>
+                <div class="column">Columna 3</div>
+                <div class="column">Columna 4</div>
+                <div class="column">Columna 5</div>
+                <div class="column">Columna 6</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="header">
+                <div class="top">
+                    <div class="circle"><span class="red circle2"></span></div>
+                    <div class="circle"><span class="yellow circle2"></span></div>
+                    <div class="circle"><span class="green circle2"></span></div>
+                    <div class="title">
+                        <p id="title2">CSS</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="code-container">
+                <textarea class="area" id="code" name="code" readonly>
+.media_column-wrapper {
+    width: 500px;
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.media_column {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.column {
+    flex: 20%;
+    padding: 20px;
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    border: 1px solid white;
+    margin: 0;
+    transition: all 0.3s;
+}
+
+@media screen and (max-width: 992px) {
+    .column {
+        flex: 33.33%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .media_column {
+        flex-direction: column;
+    }
+
+    .column {
+        flex: 100%;
+    }
+}
+                </textarea>
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="header">
+                <div class="top">
+                    <div class="circle"><span class="red circle2"></span></div>
+                    <div class="circle"><span class="yellow circle2"></span></div>
+                    <div class="circle"><span class="green circle2"></span></div>
+                    <div class="title">
+                        <p id="title2">HTML</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="code-container">
+                <textarea class="area" id="code" name="code" readonly>
+&lt;div class="media_column-wrapper"&gt;
+    &lt;div class="media_column"&gt;
+        &lt;div class="column"&gt;Columna 1&lt;/div&gt;
+        &lt;div class="column"&gt;Columna 2&lt;/div&gt;
+        &lt;div class="column"&gt;Columna 3&lt;/div&gt;
+        &lt;div class="column"&gt;Columna 4&lt;/div&gt;
+        &lt;div class="column"&gt;Columna 5&lt;/div&gt;
+        &lt;div class="column"&gt;Columna 6&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                </textarea>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <h2 class="container-title">Container Queries: Actuan en función del tamaño del contenedor</h2>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
