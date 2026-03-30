@@ -3,7 +3,7 @@
 ## Uso de IA
 
 Para el desarrollo de esta tarea, se usó IA principalmente para solucionar errores de sintaxis y definir ciertas funciones en JS para mejorar la presentación de algunos elementos.
-Se consultó, por ejemplo, para formatear el código dentro de las etiquetas HTML <code>, y definir switchDirection() en flexbox/script.js.
+Se consultó, por ejemplo, para formatear el código dentro de las etiquetas HTML `<code>`, y definir switchDirection() en flexbox/script.js.
 Al limitar su uso sólo como asistente y para casos puntuales, lo entregado por la IA cumplía con lo solicitado.
 Como posibilidades de mejora, la explicación que entrega el asistente junto al código podría ser por defecto más concisa para consultas que son más breves.
 
